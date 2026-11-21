@@ -20,7 +20,7 @@ dependencies:
 
   # 图表 / 截图 / 选图 / 写入相册 / 文件路径
   fl_chart: 0.68.0
-  screenshot: ^2.3.0
+  screenshot: ^3.0.0
   image_picker: ^1.1.2
   gal: ^2.3.0
   path_provider: ^2.1.4
