@@ -1,0 +1,56 @@
+name: Build Debug APK
+
+# 推送到 main/master 或手动触发时，在云端编译 debug APK 并作为产物上传
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: 安装 Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      # 仓库里只提交了业务相关的 Android 文件（权限清单、MainActivity），
+      # gradle wrapper / 主题 / 图标等由 flutter create 补齐。
+      - name: 补齐 Android 平台工程
+        run: |
+          flutter create --platforms=android --org com.example --project-name personal_growth _scaffold
+          mkdir -p android
+          cp -rn _scaffold/android/. android/ || true
+          rm -rf _scaffold
+
+      - name: 校验 Android 工程完整
+        run: |
+          test -f android/settings.gradle || test -f android/settings.gradle.kts
+          test -f android/app/src/main/AndroidManifest.xml
+
+      - name: 拉取依赖
+        run: flutter pub get
+
+      - name: 构建 debug APK
+        run: flutter build apk --debug
+
+      - name: 上传 APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: personal-growth-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 30

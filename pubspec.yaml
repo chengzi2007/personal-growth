@@ -1,0 +1,38 @@
+name: personal_growth
+description: 个人成长分析 —— 纯本地的成长记录、打分与可视化应用
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+
+  # 本地存储：以 Map 形式存 JSON，无需 build_runner 代码生成
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # 图表 / 截图 / 选图 / 写入相册 / 文件路径
+  fl_chart: 0.68.0
+  screenshot: ^2.3.0
+  image_picker: ^1.1.2
+  gal: ^2.3.0
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    # 打分规则 / 维度 / 寄语全部在这里配置，改完重启即可生效
+    - assets/config/app_config.json

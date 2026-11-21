@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "c22e7f5d-a44f-4f54-987a-94006878844b",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\paida\\OneDrive\\文档\\Trae-CN\\temp_20261121_01\\.archify\\architecture-personal-growth-20261121-210455\\candidate.json",
+  "output": "C:\\Users\\paida\\OneDrive\\文档\\Trae-CN\\temp_20261121_01\\personal_growth\\docs\\architecture.html",
+  "specification": {
+    "sha256": "6f490e41b0da96830e152934d6ae59335d827355e74b70f7601cdf5afadbc966",
+    "bytes": 8675
+  },
+  "artifact": {
+    "sha256": "a3ae0ed80916d43adee01606879ae0078c3bb2198ebf1699e0fe68dfb35cd981",
+    "bytes": 848516
+  }
+}

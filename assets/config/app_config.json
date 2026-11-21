@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "appName": "个人成长分析",
+  "levels": [
+    { "key": "low", "label": "低", "caption": "轻量积累" },
+    { "key": "medium", "label": "中", "caption": "稳定推进" },
+    { "key": "high", "label": "高", "caption": "高光时刻" }
+  ],
+  "dimensions": [
+    {
+      "key": "study",
+      "name": "学习",
+      "color": "#2F6F5E",
+      "icon": "auto_stories",
+      "points": { "low": 1, "medium": 2, "high": 3 }
+    },
+    {
+      "key": "skill",
+      "name": "技能",
+      "color": "#3F5B8B",
+      "icon": "architecture",
+      "points": { "low": 1, "medium": 2, "high": 3 }
+    },
+    {
+      "key": "certificate",
+      "name": "证书",
+      "color": "#B07B2A",
+      "icon": "workspace_premium",
+      "points": { "low": 5, "medium": 8, "high": 10 }
+    },
+    {
+      "key": "life",
+      "name": "生活",
+      "color": "#A8633F",
+      "icon": "local_florist",
+      "points": { "low": 1, "medium": 2, "high": 3 }
+    },
+    {
+      "key": "health",
+      "name": "健康",
+      "color": "#A64B4B",
+      "icon": "favorite",
+      "points": { "low": 1, "medium": 2, "high": 3 }
+    },
+    {
+      "key": "social",
+      "name": "社交",
+      "color": "#4A7C86",
+      "icon": "groups",
+      "points": { "low": 1, "medium": 2, "high": 3 }
+    }
+  ],
+  "rules": {
+    "streakDimension": "study",
+    "streakBonusPerDay": 1
+  },
+  "quotes": [
+    "日拱一卒，功不唐捐。",
+    "把今天记下来，明天就看得见变化。",
+    "不必每一天都闪耀，但要让每一天都可追溯。",
+    "成长不是一次跃迁，而是许多个微小的今天。",
+    "慢一点没关系，别停下来就好。",
+    "你记录的每一笔，都是给未来的自己留的凭证。",
+    "真正的复利，藏在没人看见的日常里。",
+    "先完成，再完美。",
+    "把注意力放在能积累的事情上。",
+    "今天的坚持，是明天的底气。"
+  ]
+}
